@@ -11,6 +11,14 @@
 		16B4076E298118AC00FB64D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B4076D298118AC00FB64D8 /* SceneDelegate.swift */; };
 		16B40770298118AC00FB64D8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B4076F298118AC00FB64D8 /* MainViewController.swift */; };
 		16B40775298118AF00FB64D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16B40774298118AF00FB64D8 /* Assets.xcassets */; };
+		16B4078629811E2300FB64D8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B4078529811E2300FB64D8 /* Model.swift */; };
+		16B4078829811EAF00FB64D8 /* Extensions + MyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B4078729811EAF00FB64D8 /* Extensions + MyColor.swift */; };
+		16B4078C29811F1B00FB64D8 /* Extensions + Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B4078B29811F1B00FB64D8 /* Extensions + Icon.swift */; };
+		16B4078F29811FDA00FB64D8 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 16B4078E29811FDA00FB64D8 /* SnapKit */; };
+		16B407912981206500FB64D8 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B407902981206500FB64D8 /* SwitchTableViewCell.swift */; };
+		16B407932981207D00FB64D8 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B407922981207D00FB64D8 /* SettingTableViewCell.swift */; };
+		16B407952981209700FB64D8 /* FullIconTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B407942981209700FB64D8 /* FullIconTableViewCell.swift */; };
+		16B407972981211700FB64D8 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B407962981211700FB64D8 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +28,13 @@
 		16B4076F298118AC00FB64D8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		16B40774298118AF00FB64D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16B40779298118AF00FB64D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16B4078529811E2300FB64D8 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		16B4078729811EAF00FB64D8 /* Extensions + MyColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + MyColor.swift"; sourceTree = "<group>"; };
+		16B4078B29811F1B00FB64D8 /* Extensions + Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + Icon.swift"; sourceTree = "<group>"; };
+		16B407902981206500FB64D8 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		16B407922981207D00FB64D8 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		16B407942981209700FB64D8 /* FullIconTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullIconTableViewCell.swift; sourceTree = "<group>"; };
+		16B407962981211700FB64D8 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16B4078F29811FDA00FB64D8 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +81,8 @@
 		16B4077F29811CD800FB64D8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				16B4078729811EAF00FB64D8 /* Extensions + MyColor.swift */,
+				16B4078B29811F1B00FB64D8 /* Extensions + Icon.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -73,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				16B4076F298118AC00FB64D8 /* MainViewController.swift */,
+				16B407962981211700FB64D8 /* DetailView.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -80,6 +99,9 @@
 		16B4078129811CFF00FB64D8 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				16B407902981206500FB64D8 /* SwitchTableViewCell.swift */,
+				16B407922981207D00FB64D8 /* SettingTableViewCell.swift */,
+				16B407942981209700FB64D8 /* FullIconTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -87,6 +109,7 @@
 		16B4078229811D0F00FB64D8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				16B4078529811E2300FB64D8 /* Model.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -125,6 +148,9 @@
 			dependencies = (
 			);
 			name = "Setting IOS UIKit - iOS-8 HW-13 GV";
+			packageProductDependencies = (
+				16B4078E29811FDA00FB64D8 /* SnapKit */,
+			);
 			productName = "Setting IOS UIKit - iOS-8 HW-13 GV";
 			productReference = 16B40768298118AC00FB64D8 /* Setting IOS UIKit - iOS-8 HW-13 GV.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +179,9 @@
 				Base,
 			);
 			mainGroup = 16B4075F298118AC00FB64D8;
+			packageReferences = (
+				16B4078D29811FDA00FB64D8 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 16B40769298118AC00FB64D8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -178,9 +207,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16B4078C29811F1B00FB64D8 /* Extensions + Icon.swift in Sources */,
 				16B40770298118AC00FB64D8 /* MainViewController.swift in Sources */,
+				16B407912981206500FB64D8 /* SwitchTableViewCell.swift in Sources */,
+				16B407972981211700FB64D8 /* DetailView.swift in Sources */,
+				16B4078829811EAF00FB64D8 /* Extensions + MyColor.swift in Sources */,
 				16B4076C298118AC00FB64D8 /* AppDelegate.swift in Sources */,
 				16B4076E298118AC00FB64D8 /* SceneDelegate.swift in Sources */,
+				16B407932981207D00FB64D8 /* SettingTableViewCell.swift in Sources */,
+				16B407952981209700FB64D8 /* FullIconTableViewCell.swift in Sources */,
+				16B4078629811E2300FB64D8 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +413,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		16B4078D29811FDA00FB64D8 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		16B4078E29811FDA00FB64D8 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16B4078D29811FDA00FB64D8 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 16B40760298118AC00FB64D8 /* Project object */;
 }
