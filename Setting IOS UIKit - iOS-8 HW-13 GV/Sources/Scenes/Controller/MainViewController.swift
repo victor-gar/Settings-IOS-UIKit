@@ -8,8 +8,13 @@
 import UIKit
 import SnapKit
 
-class MainViewController: UIViewController {
-        
+protocol SettingControllerDelegate: AnyObject {
+    func pushDetail(cell: Setting)
+}
+class MainViewController: UIViewController, SettingControllerDelegate {
+    
+    var model: TableData?
+    
     private var settingsListView: SettingListView? {
         guard isViewLoaded else { return nil }
         return view as? SettingListView
@@ -23,14 +28,30 @@ class MainViewController: UIViewController {
         navigationController?.navigationBar.topItem?.title = "Settings"
              
         view = SettingListView()
-
+        
+        model = TableData()
+        
+        configureView()
         print("controller")
     }
+}
 
-    //MARK: - Setup
-
-    //MARK: - User Action
+    //MARK: - Configurations
+extension MainViewController {
+    func configureView() {
+        
+        guard let models = model?.data else { return }
+        
+        settingsListView?.configureView(with: models)
+        
+        settingsListView?.delegate = self
+    }
     
+    func pushDetail(cell: Setting) {
+        let detailVC = DetailController()
+        detailVC.cell = cell
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
 }
 
 
