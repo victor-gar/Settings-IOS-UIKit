@@ -9,25 +9,60 @@ import UIKit
 
 class DetailController: UIViewController {
     
-    public var modells = [Section]()
-
-    private var detailView: DetailView? {
-        guard isViewLoaded else { return nil }
-        return view as? DetailView
+    var cell: Setting? {
+        didSet {
+            label.text = cell?.title
+            iconImageView.image = UIImage(named: cell!.icon) ?? UIImage(named: "default")
+        }
     }
     
+    //MARK: - UI Elements
+
+    private let iconImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.tintColor = .black
+        imageView.contentMode = .scaleAspectFit
+        imageView.layer.cornerRadius = 30
+        imageView.clipsToBounds = true
+        imageView.layer.masksToBounds = true
+        return imageView
+    }()
+    
+    private let label: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 1
+        return label
+    }()
+       
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupHierarchy()
+        setupLayout()
         navigationItem.largeTitleDisplayMode = .never
-        view = DetailView()
         view.backgroundColor = .systemBackground
         print("detail")
+           
         }
- 
-    // MARK: - Confguration
     
-    // MARK: - User actions and updates
+    //MARK: - Setup
+    
+    private func setupHierarchy(){
+        view.addSubview(iconImageView)
+        view.addSubview(label)
+    }
+    
+    private func setupLayout(){
+        label.snp.makeConstraints { make in
+            make.centerX.equalTo(view)
+            make.top.equalTo(iconImageView.snp.bottom).offset(12)
+        }
+        iconImageView.snp.makeConstraints { make in
+            make.centerX.equalTo(view)
+            make.top.equalTo(150)
+            make.width.equalTo(128)
+            make.height.equalTo(128)
+        }
+    }
 }
